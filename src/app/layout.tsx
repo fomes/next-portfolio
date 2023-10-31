@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/helper";
+import { Navigation } from "@/components/Navigation";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -27,7 +28,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(roboto.className, bebas.variable)}>{children}</body>
+      <body
+        className={cn(
+          roboto.className,
+          bebas.variable,
+          "bg-zinc-900 text-zinc-50"
+        )}
+      >
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
