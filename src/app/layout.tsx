@@ -3,6 +3,7 @@ import { Roboto, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/helper";
 import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ export default function RootLayout({
         )}
       >
         <Navigation />
-        {children}
+        <main className="max-w-7xl mx-auto px-4 md:px-8">{children}</main>
       </body>
     </html>
   );

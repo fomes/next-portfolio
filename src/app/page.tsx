@@ -1,3 +1,9 @@
+import { HeroSection } from "@/components/HeroSection";
+
 export default function Home() {
-  return <div className="font-title"></div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
