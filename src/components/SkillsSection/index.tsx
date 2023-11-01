@@ -1,16 +1,12 @@
 "use client";
 
-import { ReactNode } from "react";
 import { Heading } from "../Heading";
 import { skills } from "@/data/skillsData";
 
-interface SkillsSectionProps {
-  children?: ReactNode;
-}
 
-export function SkillsSection({ children }: SkillsSectionProps) {
+export function SkillsSection() {
   return (
-    <section>
+    <section id="skills">
       <Heading title="Skills" desc="My current stack are..." />
 
       <div className="space-y-6">
