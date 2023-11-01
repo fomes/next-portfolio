@@ -1,14 +1,12 @@
 import { projects } from "@/data/projectData";
 import { ProjectCard } from "../ProjectCard";
 import { CustomLink } from "../CustomLink";
+import { Heading } from "../Heading";
 
 export function ProjectSection() {
   return (
     <section>
-      <p className="font-title tracking-wider text-4xl uppercase mt-6">
-        Project
-      </p>
-      <p className="text-zinc-400 mb-6">My best project i have build</p>
+      <Heading title="Project" desc="My best project i have build" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => {
