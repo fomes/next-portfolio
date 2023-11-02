@@ -20,7 +20,7 @@ export function HeroSection() {
           autem similique nobis eum, saepe id ab sed! Itaque, officia nulla?
         </p>
 
-        <CustomLink href={"#projects"} className="absolute mt-4">
+        <CustomLink href={"projects"} className="absolute mt-4">
           My Work
         </CustomLink>
       </div>

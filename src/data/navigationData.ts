@@ -20,7 +20,7 @@ export const navMenuList = [
   },
 
   {
-    title: "Hire me",
+    title: "Contact",
     href: "mailto:fgomesdeluna@gmail.com",
   },
 ];

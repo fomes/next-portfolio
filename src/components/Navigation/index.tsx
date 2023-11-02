@@ -7,6 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { RiTerminalBoxLine } from "react-icons/ri";
 import { cn } from "@/utils/helper";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
@@ -44,17 +45,28 @@ export function Navigation() {
               const isLastElement = index === navMenuList.length - 1;
               return (
                 <li key={href}>
-                  <CustomLink
-                    href={href}
-                    onClick={() => {
-                      if (isNavOpen) {
-                        setIsNavOpen(false);
-                      }
-                    }}
-                    linkType={isLastElement ? "primary" : "link"}
-                  >
-                    {title}
-                  </CustomLink>
+                  <>
+                    {isLastElement ? (
+                      <Link
+                        href={"mailto:fgomesdeluna@gmail.com"}
+                        className="bg-zinc-100 hover:bg-zinc-300 text-zinc-900 px-4 py-2 rounded-full text-sm cursor-pointer"
+                      >
+                        Contact
+                      </Link>
+                    ) : (
+                      <CustomLink
+                        href={href}
+                        onClick={() => {
+                          if (isNavOpen) {
+                            setIsNavOpen(false);
+                          }
+                        }}
+                        linkType={"link"}
+                      >
+                        {title}
+                      </CustomLink>
+                    )}
+                  </>
                 </li>
               );
             })}

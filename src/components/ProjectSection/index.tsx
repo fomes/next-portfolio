@@ -8,7 +8,7 @@ import { Heading } from "../Heading";
 export function ProjectSection() {
   return (
     <section id="projects">
-      <Heading title="Project" desc="My best project i have build" />
+      <Heading title="Projects" desc="My best project i have build" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => {

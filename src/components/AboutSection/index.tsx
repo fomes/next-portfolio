@@ -4,6 +4,7 @@ import { socialLinks } from "@/data/socialLinksData";
 import { Heading } from "../Heading";
 import Image from "next/image";
 import { CustomLink } from "../CustomLink";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -30,17 +31,17 @@ export function AboutSection() {
             temporibus alias dolorem in.
           </p>
 
-          <ul className="flex gap-2 mt-4">
+          <ul className="flex gap-12 mt-4">
             {socialLinks.map((link, index) => {
               return (
                 <li key={index}>
-                  <CustomLink
+                  <Link
                     href={link.href}
-                    linkType="secondary"
-                    className="w-10 h-10 flex justify-center items-center"
+                    target="_blank"
+                    className="w-9 h-9 absolute z-10 rounded-full border border-zinc-700 hover:bg-zinc-700 flex justify-center items-center"
                   >
                     <link.icon className="text-xl shrink-0" />
-                  </CustomLink>
+                  </Link>
                 </li>
               );
             })}
