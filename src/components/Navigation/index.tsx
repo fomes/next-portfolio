@@ -4,21 +4,27 @@ import { CustomLink } from "../CustomLink";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import { LuLanguages } from "react-icons/lu";
-import { RiTerminalBoxLine } from "react-icons/ri";
+import { RiTerminalBoxLine, RiEnglishInput } from "react-icons/ri";
 import { cn } from "@/utils/helper";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import { infoBR, infoEN } from "@/data/userInfo";
+import { LangContext } from "@/context/LangContext";
 
 export function Navigation() {
-  let info = infoBR;
-
+  const { langBR, setLangBR } = useContext(LangContext);
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+
+  let info = langBR ? infoBR : infoEN;
 
   useEffect(() => {
     const overflowvalue = isNavOpen ? "hidden" : "auto";
     document.body.style.overflow = overflowvalue;
   }, [isNavOpen]);
+
+  const handleToggleLanguage = () => {
+    setLangBR((prevState) => !prevState);
+  };
 
   return (
     <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
@@ -29,10 +35,19 @@ export function Navigation() {
             className="hover:scale-110 transition-all duration-300 cursor-pointer"
           />
 
-          <LuLanguages
-            size={25}
-            className="hover:scale-110 transition-all duration-300 cursor-pointer"
-          />
+          <div onClick={handleToggleLanguage}>
+            {langBR ? (
+              <RiEnglishInput
+                size={25}
+                className="hover:scale-110 transition-all duration-300 cursor-pointer"
+              />
+            ) : (
+              <LuLanguages
+                size={25}
+                className="hover:scale-110 transition-all duration-300 cursor-pointer"
+              />
+            )}
+          </div>
         </div>
 
         <div

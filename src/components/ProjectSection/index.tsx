@@ -4,9 +4,12 @@ import { ProjectCard } from "../ProjectCard";
 import { CustomLink } from "../CustomLink";
 import { Heading } from "../Heading";
 import { infoEN, infoBR } from "@/data/userInfo";
+import { useContext } from "react";
+import { LangContext } from "@/context/LangContext";
 
 export function ProjectSection() {
-  let info = infoBR;
+  const { langBR } = useContext(LangContext);
+  let info = langBR ? infoBR : infoEN;
 
   return (
     <section id="projects">

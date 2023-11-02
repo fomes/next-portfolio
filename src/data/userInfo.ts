@@ -77,7 +77,7 @@ export const infoBR = {
   about: {
     title: "Sobre mim",
     greeting: "Olá mundo, Eu sou Felipe Gomes",
-    dec: "Trabalho com tecnologia há mais de 8 anos e há 3 anos optei por migrar da área de QA para Desenvolvedor me interessando pela carreira de Full Stack. Experiência com Javascript, Typescript, NodeJs, ReactJs baseado nas últimas 3 experiências que tive. Tenho experiência também com projetos pessoais e projetos do curso de formação Full Stack na Trybe. Tenho boa capacidade de aprendizado e bom desempenho no trabalho em equipe. Sempre disposto a aprender e aprimorar meus conhecimentos.",
+    desc: "Trabalho com tecnologia há mais de 8 anos e há 3 anos optei por migrar da área de QA para Desenvolvedor me interessando pela carreira de Full Stack. Experiência com Javascript, Typescript, NodeJs, ReactJs baseado nas últimas 3 experiências que tive. Tenho experiência também com projetos pessoais e projetos do curso de formação Full Stack na Trybe. Tenho boa capacidade de aprendizado e bom desempenho no trabalho em equipe. Sempre disposto a aprender e aprimorar meus conhecimentos.",
   },
 
   footer: {

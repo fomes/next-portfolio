@@ -5,9 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { socialLinks } from "@/data/userData";
 import { infoBR, infoEN } from "@/data/userInfo";
+import { useContext } from "react";
+import { LangContext } from "@/context/LangContext";
 
 export function AboutSection() {
-  let info = infoBR;
+  const { langBR } = useContext(LangContext);
+  let info = langBR ? infoBR : infoEN;
 
   return (
     <section id="about" className="mb-44">
@@ -26,7 +29,7 @@ export function AboutSection() {
 
         <div className="space-y-2">
           <p>{info.about.greeting}</p>
-          <p className="text-zinc-400">{info.about.dec}</p>
+          <p className="text-zinc-400">{info.about.desc}</p>
 
           <ul className="flex gap-12 mt-4">
             {socialLinks.map((link, index) => {

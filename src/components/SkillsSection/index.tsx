@@ -2,10 +2,13 @@
 
 import { skills } from "@/data/userData";
 import { Heading } from "../Heading";
-import { infoBR } from "@/data/userInfo";
+import { infoBR, infoEN } from "@/data/userInfo";
+import { useContext } from "react";
+import { LangContext } from "@/context/LangContext";
 
 export function SkillsSection() {
-  let info = infoBR;
+  const { langBR } = useContext(LangContext);
+  let info = langBR ? infoBR : infoEN;
 
   return (
     <section id="skills">

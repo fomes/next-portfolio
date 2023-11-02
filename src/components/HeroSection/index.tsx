@@ -3,9 +3,13 @@
 import { infoBR, infoEN } from "@/data/userInfo";
 import { CustomLink } from "../CustomLink";
 import Image from "next/image";
+import { useContext } from "react";
+import { LangContext } from "@/context/LangContext";
 
 export function HeroSection() {
-  let info = infoBR;
+  const { langBR } = useContext(LangContext);
+
+  let info = langBR ? infoBR : infoEN;
 
   return (
     <section

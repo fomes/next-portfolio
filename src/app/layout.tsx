@@ -3,8 +3,9 @@ import { Roboto, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/helper";
 import { Navigation } from "@/components/Navigation";
-import { HeroSection } from "@/components/HeroSection";
 import { FooterSection } from "@/components/FooterSection";
+import LangProvider from "@/context/LangContext";
+import ScrollButton from "@/components/ScrollButton";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -29,20 +30,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          roboto.className,
-          bebas.variable,
-          "bg-zinc-900 text-zinc-50"
-        )}
-      >
-        <Navigation />
-        <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
-          {children}
-        </main>
-        <FooterSection />
-      </body>
-    </html>
+    <LangProvider>
+      <html>
+        <body
+          className={cn(
+            roboto.className,
+            bebas.variable,
+            "bg-zinc-900 text-zinc-50"
+          )}
+        >
+          <Navigation />
+          <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
+            {children}
+          </main>
+          <FooterSection />
+          <ScrollButton />
+        </body>
+      </html>
+    </LangProvider>
   );
 }
