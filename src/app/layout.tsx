@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/utils/helper";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { FooterSection } from "@/components/FooterSection";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -37,7 +38,10 @@ export default function RootLayout({
         )}
       >
         <Navigation />
-        <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">{children}</main>
+        <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
+          {children}
+        </main>
+        <FooterSection />
       </body>
     </html>
   );

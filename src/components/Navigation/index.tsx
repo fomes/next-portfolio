@@ -16,7 +16,7 @@ export function Navigation() {
   }, [isNavOpen]);
 
   return (
-    <nav className="py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
+    <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
         <p>Logo</p>
         <div

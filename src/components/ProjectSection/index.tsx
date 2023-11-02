@@ -5,7 +5,7 @@ import { Heading } from "../Heading";
 
 export function ProjectSection() {
   return (
-    <section id="projects">
+    <section id="projects" className="scroll-mt-20">
       <Heading title="Project" desc="My best project i have build" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]">
+    <section
+      id="home"
+      className="scroll-mt-20 grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
+    >
       <div>
         <p className="text-lg mb-1">Hello World, I am</p>
         <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
@@ -15,7 +18,7 @@ export function HeroSection() {
           autem similique nobis eum, saepe id ab sed! Itaque, officia nulla?
         </p>
 
-        <CustomLink href={"#projects"} className="mt-4">
+        <CustomLink href={"#projects"} className="absolute mt-4">
           My Work
         </CustomLink>
       </div>
