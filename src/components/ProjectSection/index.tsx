@@ -1,17 +1,19 @@
 "use client";
 
-import { projects } from "@/data/projectData";
 import { ProjectCard } from "../ProjectCard";
 import { CustomLink } from "../CustomLink";
 import { Heading } from "../Heading";
+import { infoEN, infoBR } from "@/data/userInfo";
 
 export function ProjectSection() {
+  let info = infoBR;
+
   return (
     <section id="projects">
-      <Heading title="Projects" desc="My best project i have build" />
+      <Heading title={info.projectSection.title} desc="" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => {
+        {info.projects.map((project) => {
           return <ProjectCard key={project.id} project={project} />;
         })}
       </div>
@@ -21,7 +23,7 @@ export function ProjectSection() {
           linkType="secondary"
           target="_blank"
         >
-          See all projects
+          {info.projectSection.allProjectBtn}
         </CustomLink>
       </div>
     </section>

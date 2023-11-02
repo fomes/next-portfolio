@@ -1,13 +1,15 @@
 "use client";
 
+import { skills } from "@/data/userData";
 import { Heading } from "../Heading";
-import { skills } from "@/data/skillsData";
-
+import { infoBR } from "@/data/userInfo";
 
 export function SkillsSection() {
+  let info = infoBR;
+
   return (
     <section id="skills">
-      <Heading title="Skills" desc="My current stack are..." />
+      <Heading title={info.skills.title} desc="" />
 
       <div className="space-y-6">
         {Object.values(skills).map((skill) => {

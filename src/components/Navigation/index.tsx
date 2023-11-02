@@ -1,15 +1,18 @@
 "use client";
 
-import { navMenuList } from "@/data/navigationData";
 import { CustomLink } from "../CustomLink";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
+import { LuLanguages } from "react-icons/lu";
 import { RiTerminalBoxLine } from "react-icons/ri";
 import { cn } from "@/utils/helper";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { infoBR, infoEN } from "@/data/userInfo";
 
 export function Navigation() {
+  let info = infoBR;
+
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -20,10 +23,18 @@ export function Navigation() {
   return (
     <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
-        <RiTerminalBoxLine
-          size={25}
-          className="hover:scale-110 transition-all duration-300"
-        />
+        <div className="flex gap-4">
+          <RiTerminalBoxLine
+            size={25}
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
+          />
+
+          <LuLanguages
+            size={25}
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
+          />
+        </div>
+
         <div
           className="md:hidden cursor-pointer"
           onClick={() => setIsNavOpen((prevState) => !prevState)}
@@ -41,8 +52,8 @@ export function Navigation() {
           )}
         >
           <ul className="flex items-center gap-6 flex-col md:flex-row">
-            {navMenuList.map(({ title, href }, index) => {
-              const isLastElement = index === navMenuList.length - 1;
+            {info.navMenuList.map(({ title, href }, index) => {
+              const isLastElement = index === info.navMenuList.length - 1;
               return (
                 <li key={href}>
                   <>
@@ -51,7 +62,7 @@ export function Navigation() {
                         href={"mailto:fgomesdeluna@gmail.com"}
                         className="bg-zinc-100 hover:bg-zinc-300 text-zinc-900 px-4 py-2 rounded-full text-sm cursor-pointer"
                       >
-                        Contact
+                        {title}
                       </Link>
                     ) : (
                       <CustomLink

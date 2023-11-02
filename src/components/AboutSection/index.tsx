@@ -1,15 +1,17 @@
 "use client";
 
-import { socialLinks } from "@/data/socialLinksData";
 import { Heading } from "../Heading";
 import Image from "next/image";
-import { CustomLink } from "../CustomLink";
 import Link from "next/link";
+import { socialLinks } from "@/data/userData";
+import { infoBR, infoEN } from "@/data/userInfo";
 
 export function AboutSection() {
+  let info = infoBR;
+
   return (
     <section id="about" className="mb-44">
-      <Heading title="About me" desc="Let me told you something about me" />
+      <Heading title={info.about.title} desc={""} />
 
       <div className="flex gap-4 flex-col md:flex-row items-center">
         <div className="h-80 w-80 shrink-0 rounded-full overflow-hidden">
@@ -23,13 +25,8 @@ export function AboutSection() {
         </div>
 
         <div className="space-y-2">
-          <p>Hii, I am Felipe Gomes</p>
-          <p className="text-zinc-400">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-            obcaecati incidunt, assumenda laborum a, necessitatibus non
-            repudiandae quae ut inventore libero? Quisquam eum iste est ducimus
-            temporibus alias dolorem in.
-          </p>
+          <p>{info.about.greeting}</p>
+          <p className="text-zinc-400">{info.about.dec}</p>
 
           <ul className="flex gap-12 mt-4">
             {socialLinks.map((link, index) => {

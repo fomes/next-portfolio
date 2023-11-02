@@ -1,27 +1,26 @@
 "use client";
 
+import { infoBR, infoEN } from "@/data/userInfo";
 import { CustomLink } from "../CustomLink";
 import Image from "next/image";
 
 export function HeroSection() {
+  let info = infoBR;
+
   return (
     <section
       id="home"
       className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
     >
       <div>
-        <p className="text-lg mb-1">Hello World, I am</p>
+        <p className="text-lg mb-1">{info.hero.name}</p>
         <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
-          Full Stack Developer
+          {info.hero.title}
         </h1>
-        <p className="text-zinc-300 mt-2 text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-          expedita, magni inventore modi qui enim ducimus assumenda, nostrum et
-          autem similique nobis eum, saepe id ab sed! Itaque, officia nulla?
-        </p>
+        <p className="text-zinc-300 mt-2 text-justify">{info.hero.desc}</p>
 
         <CustomLink href={"projects"} className="absolute mt-4">
-          My Work
+          {info.hero.btn}
         </CustomLink>
       </div>
 
