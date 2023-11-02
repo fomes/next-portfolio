@@ -1,22 +1,22 @@
 export const navMenuList = [
   {
     title: "Home",
-    href: "#",
+    href: "home",
   },
 
   {
     title: "Projects",
-    href: "#projects",
+    href: "projects",
   },
 
   {
     title: "Skills",
-    href: "#skills",
+    href: "skills",
   },
 
   {
     title: "About",
-    href: "#about",
+    href: "about",
   },
 
   {

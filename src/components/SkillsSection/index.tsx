@@ -6,7 +6,7 @@ import { skills } from "@/data/skillsData";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="scroll-mt-20">
+    <section id="skills">
       <Heading title="Skills" desc="My current stack are..." />
 
       <div className="space-y-6">

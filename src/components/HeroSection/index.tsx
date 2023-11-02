@@ -1,3 +1,5 @@
+"use client";
+
 import { CustomLink } from "../CustomLink";
 import Image from "next/image";
 
@@ -5,7 +7,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="scroll-mt-20 grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
+      className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
     >
       <div>
         <p className="text-lg mb-1">Hello World, I am</p>

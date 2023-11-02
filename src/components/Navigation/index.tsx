@@ -4,6 +4,7 @@ import { navMenuList } from "@/data/navigationData";
 import { CustomLink } from "../CustomLink";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
+import { RiTerminalBoxLine } from "react-icons/ri";
 import { cn } from "@/utils/helper";
 import { useEffect, useState } from "react";
 
@@ -18,7 +19,10 @@ export function Navigation() {
   return (
     <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
-        <p>Logo</p>
+        <RiTerminalBoxLine
+          size={25}
+          className="hover:scale-110 transition-all duration-300"
+        />
         <div
           className="md:hidden cursor-pointer"
           onClick={() => setIsNavOpen((prevState) => !prevState)}
