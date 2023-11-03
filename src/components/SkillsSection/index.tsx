@@ -27,7 +27,7 @@ export function SkillsSection() {
                       className="bg-zinc-800/50 border border-zinc-800 p-4 inline-flex items-center gap-4 justify-center rounded-md hover:opacity-80 transition-all duration-300"
                     >
                       <stack.icon className="text-xl shrink-0" />
-                      <span>{stack.name}</span>
+                      <span className="select-none">{stack.name}</span>
                     </li>
                   );
                 })}

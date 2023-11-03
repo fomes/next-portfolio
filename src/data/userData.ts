@@ -13,6 +13,10 @@ import {
   SiMongodb,
 } from "react-icons/si";
 
+export const email = {
+  address: "fgomesdeluna@gmail.com",
+};
+
 export const skills = {
   frontend: {
     title: "Frontend",

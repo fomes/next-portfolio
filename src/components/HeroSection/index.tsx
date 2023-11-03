@@ -5,6 +5,7 @@ import { CustomLink } from "../CustomLink";
 import Image from "next/image";
 import { useContext } from "react";
 import { LangContext } from "@/context/LangContext";
+import { TypeAnimation } from "react-type-animation";
 
 export function HeroSection() {
   const { langBR } = useContext(LangContext);
@@ -17,9 +18,21 @@ export function HeroSection() {
       className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
     >
       <div>
-        <p className="text-lg mb-1">{info.hero.name}</p>
+        <p className="text-lg mb-1">
+          <TypeAnimation
+            sequence={[`${info.hero.name}`, 500]}
+            wrapper="span"
+            speed={50}
+            repeat={1}
+          />
+        </p>
         <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
-          {info.hero.title}
+          <TypeAnimation
+            sequence={[`${info.hero.title}`, 500]}
+            wrapper="span"
+            speed={50}
+            repeat={1}
+          />
         </h1>
         <p className="text-zinc-300 mt-2 text-justify">{info.hero.desc}</p>
 

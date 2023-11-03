@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import { Roboto, Bebas_Neue } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/utils/helper";
-import { Navigation } from "@/components/Navigation";
-import { FooterSection } from "@/components/FooterSection";
+import type { Metadata } from "next";
+import { NavBar } from "@/components/NavBar";
 import LangProvider from "@/context/LangContext";
 import ScrollButton from "@/components/ScrollButton";
+import { Roboto, Bebas_Neue } from "next/font/google";
+import { FooterSection } from "@/components/FooterSection";
+
+import "./globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ export default function RootLayout({
             "bg-zinc-900 text-zinc-50"
           )}
         >
-          <Navigation />
+          <NavBar />
           <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
             {children}
           </main>

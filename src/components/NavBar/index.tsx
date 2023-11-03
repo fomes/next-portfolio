@@ -1,17 +1,16 @@
 "use client";
 
-import { CustomLink } from "../CustomLink";
-import { FiMenu } from "react-icons/fi";
-import { AiOutlineClose } from "react-icons/ai";
-import { LuLanguages } from "react-icons/lu";
-import { RiTerminalBoxLine, RiEnglishInput } from "react-icons/ri";
 import { cn } from "@/utils/helper";
-import { useContext, useEffect, useState } from "react";
-import Link from "next/link";
+import { FiMenu } from "react-icons/fi";
+import { NavBarList } from "../NavBarList";
+import { LuLanguages } from "react-icons/lu";
+import { AiOutlineClose } from "react-icons/ai";
 import { infoBR, infoEN } from "@/data/userInfo";
 import { LangContext } from "@/context/LangContext";
+import { useContext, useEffect, useState } from "react";
+import { RiTerminalBoxLine, RiEnglishInput } from "react-icons/ri";
 
-export function Navigation() {
+export function NavBar() {
   const { langBR, setLangBR } = useContext(LangContext);
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
@@ -67,35 +66,11 @@ export function Navigation() {
           )}
         >
           <ul className="flex items-center gap-6 flex-col md:flex-row">
-            {info.navMenuList.map(({ title, href }, index) => {
-              const isLastElement = index === info.navMenuList.length - 1;
-              return (
-                <li key={href}>
-                  <>
-                    {isLastElement ? (
-                      <Link
-                        href={"mailto:fgomesdeluna@gmail.com"}
-                        className="bg-zinc-100 hover:bg-zinc-300 text-zinc-900 px-4 py-2 rounded-full text-sm cursor-pointer"
-                      >
-                        {title}
-                      </Link>
-                    ) : (
-                      <CustomLink
-                        href={href}
-                        onClick={() => {
-                          if (isNavOpen) {
-                            setIsNavOpen(false);
-                          }
-                        }}
-                        linkType={"link"}
-                      >
-                        {title}
-                      </CustomLink>
-                    )}
-                  </>
-                </li>
-              );
-            })}
+            <NavBarList
+              info={info}
+              isNavOpen={isNavOpen}
+              setIsNavOpen={setIsNavOpen}
+            />
           </ul>
         </div>
       </div>
