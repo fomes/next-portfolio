@@ -12,7 +12,8 @@ import { RiTerminalBoxLine, RiEnglishInput } from "react-icons/ri";
 
 export function NavBar() {
   const { langBR, setLangBR } = useContext(LangContext);
-  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [animateNavList, setAnimateNavList] = useState(false);
 
   let info = langBR ? infoBR : infoEN;
 
@@ -25,13 +26,20 @@ export function NavBar() {
     setLangBR((prevState) => !prevState);
   };
 
+  const handleToggleType = () => {
+    setAnimateNavList((prevState) => !prevState);
+  };
+
   return (
     <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
         <div className="flex gap-4">
           <RiTerminalBoxLine
             size={25}
-            className="hover:scale-110 transition-all duration-300 cursor-pointer"
+            onClick={handleToggleType}
+            className={`${
+              animateNavList ? "brightness-100" : "brightness-50"
+            } hover:scale-110 transition-all duration-300 cursor-pointer`}
           />
 
           <div onClick={handleToggleLanguage}>
@@ -70,6 +78,7 @@ export function NavBar() {
               info={info}
               isNavOpen={isNavOpen}
               setIsNavOpen={setIsNavOpen}
+              animateNavList={animateNavList}
             />
           </ul>
         </div>

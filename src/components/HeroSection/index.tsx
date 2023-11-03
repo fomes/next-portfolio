@@ -18,21 +18,16 @@ export function HeroSection() {
       className="grid md:grid-cols-2 items-center h-[calc(100vh-70px)] max-h-[678px]"
     >
       <div>
-        <p className="text-lg mb-1">
+        <p className="text-2xl mb-1">
           <TypeAnimation
-            sequence={[`${info.hero.name}`, 500]}
-            wrapper="span"
-            speed={50}
             repeat={1}
+            speed={50}
+            wrapper="span"
+            sequence={[`${info.hero.name}`, 500]}
           />
         </p>
         <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
-          <TypeAnimation
-            sequence={[`${info.hero.title}`, 500]}
-            wrapper="span"
-            speed={50}
-            repeat={1}
-          />
+          {info.hero.title}
         </h1>
         <p className="text-zinc-300 mt-2 text-justify">{info.hero.desc}</p>
 
