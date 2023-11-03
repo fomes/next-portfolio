@@ -2,7 +2,7 @@ export const infoBR = {
   hero: {
     name: "Felipe Gomes",
     title: "Desenvolvedor Full Stack",
-    desc: "Esse é meu site...",
+    desc: "Bem vindo ao meu site",
     btn: "Meus projetos",
   },
 
@@ -89,7 +89,7 @@ export const infoEN = {
   hero: {
     name: "Felipe Gomes",
     title: "Full Stack Developer",
-    desc: "This is my website...",
+    desc: "Welcome to my website",
     btn: "My work",
   },
 

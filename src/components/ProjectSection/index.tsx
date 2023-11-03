@@ -1,11 +1,11 @@
 "use client";
 
 import { ProjectCard } from "../ProjectCard";
-import { CustomLink } from "../CustomLink";
 import { Heading } from "../Heading";
 import { infoEN, infoBR } from "@/data/userInfo";
 import { useContext } from "react";
 import { LangContext } from "@/context/LangContext";
+import Link from "next/link";
 
 export function ProjectSection() {
   const { langBR } = useContext(LangContext);
@@ -21,13 +21,13 @@ export function ProjectSection() {
         })}
       </div>
       <div className="mt-6 flex justify-center">
-        <CustomLink
-          href={"https://github.com/fomes"}
-          linkType="secondary"
+        <Link
           target="_blank"
+          href={"https://github.com/fomes"}
+          className="px-4 py-2 rounded-full text-sm cursor-pointer border border-zinc-700 hover:bg-zinc-700"
         >
           {info.projectSection.allProjectBtn}
-        </CustomLink>
+        </Link>
       </div>
     </section>
   );
