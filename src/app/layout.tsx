@@ -7,6 +7,7 @@ import { Roboto, Bebas_Neue } from "next/font/google";
 import { FooterSection } from "@/components/FooterSection";
 
 import "./globals.css";
+import { Providers } from "@/components/Providers";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -37,15 +38,17 @@ export default function RootLayout({
           className={cn(
             roboto.className,
             bebas.variable,
-            "bg-zinc-900 text-zinc-50"
+            "bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50"
           )}
         >
-          <NavBar />
-          <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
-            {children}
-          </main>
-          <FooterSection />
-          <ScrollButton />
+          <Providers>
+            <NavBar />
+            <main className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-20">
+              {children}
+            </main>
+            <FooterSection />
+            <ScrollButton />
+          </Providers>
         </body>
       </html>
     </LangProvider>

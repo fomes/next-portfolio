@@ -32,7 +32,7 @@ export function NavBarList({
               {isLastElement ? (
                 <Link
                   href={`mailto:${email.address}`}
-                  className="bg-zinc-100 hover:bg-zinc-300 text-zinc-900 px-4 py-2 rounded-full text-sm cursor-pointer"
+                  className="bg-zinc-100 hover:bg-zinc-300 text-zinc-900 px-4 py-2 rounded-full text-sm transition-all duration-300 cursor-pointer"
                 >
                   {title}
                 </Link>

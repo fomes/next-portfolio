@@ -30,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             return (
               <li
                 key={stack}
-                className="px-4 py-1 text-xs border border-zinc-700 text-zinc-400 rounded-md"
+                className="px-4 py-1 text-xs border border-zinc-700 text-zinc-900 dark:bg-zinc-400 rounded-md hover:bg-zinc-800 dark:hover:bg-zinc-500 hover:text-zinc-100 transition-all duration-300 select-none"
               >
                 {stack}
               </li>
@@ -38,7 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           })}
         </ul>
         <p className="text-lg font-medium">{project.title}</p>
-        <p className="text-zinc-400">{project.desc}</p>
+        <p className="text-zinc-700 dark:text-zinc-500">{project.desc}</p>
 
         <div className="flex gap-4 absolute bottom-2 left-2">
           <CustomLink

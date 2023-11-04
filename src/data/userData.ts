@@ -30,7 +30,7 @@ export const skills = {
         icon: SiJavascript,
       },
       {
-        name: "Rect Js",
+        name: "ReactJS",
         icon: FaReact,
       },
       {
@@ -48,7 +48,7 @@ export const skills = {
     title: "Backend",
     stacks: [
       {
-        name: "Node Js",
+        name: "NodeJS",
         icon: FaNodeJs,
       },
       {

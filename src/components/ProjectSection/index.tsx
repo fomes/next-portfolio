@@ -24,7 +24,7 @@ export function ProjectSection() {
         <Link
           target="_blank"
           href={"https://github.com/fomes"}
-          className="px-4 py-2 rounded-full text-sm cursor-pointer border border-zinc-700 hover:bg-zinc-700"
+          className="px-4 py-2 rounded-full bg-zinc-500 text-zinc-100 text-sm cursor-pointer border border-zinc-700 hover:bg-zinc-700 transition-all duration-300"
         >
           {info.projectSection.allProjectBtn}
         </Link>

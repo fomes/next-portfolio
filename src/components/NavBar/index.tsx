@@ -5,6 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { NavBarList } from "../NavBarList";
 import { LuLanguages } from "react-icons/lu";
 import { AiOutlineClose } from "react-icons/ai";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 import { infoBR, infoEN } from "@/data/userInfo";
 import { LangContext } from "@/context/LangContext";
 import { useContext, useEffect, useState } from "react";
@@ -33,28 +34,24 @@ export function NavBar() {
   return (
     <nav className="sticky py-4 border-b border-zinc-800 shadow-md top-0 z-10 bg-zinc-900/20 backdrop-blur-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
-        <div className="flex gap-4">
+        <div className="flex gap-6">
+          <ThemeSwitcher />
+
+          <div onClick={handleToggleLanguage}>
+            {langBR ? (
+              <RiEnglishInput size={25} className="f-hover" />
+            ) : (
+              <LuLanguages size={25} className="f-hover" />
+            )}
+          </div>
+
           <RiTerminalBoxLine
             size={25}
             onClick={handleToggleType}
             className={`${
               animateNavList ? "brightness-100" : "brightness-50"
-            } hover:scale-110 transition-all duration-300 cursor-pointer`}
+            } f-hover`}
           />
-
-          <div onClick={handleToggleLanguage}>
-            {langBR ? (
-              <RiEnglishInput
-                size={25}
-                className="hover:scale-110 transition-all duration-300 cursor-pointer"
-              />
-            ) : (
-              <LuLanguages
-                size={25}
-                className="hover:scale-110 transition-all duration-300 cursor-pointer"
-              />
-            )}
-          </div>
         </div>
 
         <div

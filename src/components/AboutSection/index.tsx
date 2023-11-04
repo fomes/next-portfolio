@@ -38,7 +38,7 @@ export function AboutSection() {
                   <Link
                     href={link.href}
                     target="_blank"
-                    className="w-9 h-9 absolute z-10 rounded-full border border-zinc-700 hover:bg-zinc-700 flex justify-center items-center"
+                    className="w-9 h-9 absolute z-10 rounded-full border border-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex justify-center items-center f-hover"
                   >
                     <link.icon className="text-xl shrink-0" />
                   </Link>

@@ -1,9 +1,9 @@
 "use client";
 
-import { infoBR, infoEN } from "@/data/userInfo";
-import { CustomLink } from "../CustomLink";
 import Image from "next/image";
 import { useContext } from "react";
+import { CustomLink } from "../CustomLink";
+import { infoBR, infoEN } from "@/data/userInfo";
 import { LangContext } from "@/context/LangContext";
 import { TypeAnimation } from "react-type-animation";
 
@@ -29,9 +29,14 @@ export function HeroSection() {
         <h1 className="font-title tracking-wider text-3xl sm:text-6xl -ml-0.5">
           {info.hero.title}
         </h1>
-        <p className="text-zinc-300 mt-2 text-justify">{info.hero.desc}</p>
+        <p className="text-zinc-900 dark:text-zinc-300 mt-2 text-justify">
+          {info.hero.desc}
+        </p>
 
-        <CustomLink href={"projects"} className="absolute mt-4">
+        <CustomLink
+          href={"projects"}
+          className="absolute mt-4 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+        >
           {info.hero.btn}
         </CustomLink>
       </div>
