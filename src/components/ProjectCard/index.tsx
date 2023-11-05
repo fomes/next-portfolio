@@ -1,14 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { CustomLink } from "../CustomLink";
 import Link from "next/link";
 import { infoEN, infoBR } from "@/data/userInfo";
+import { useContext } from "react";
+import { LangContext } from "@/context/LangContext";
 
 interface ProjectCardProps {
   project: (typeof infoEN.projects)[0];
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  let info = infoBR;
+  const { langBR } = useContext(LangContext);
+  let info = langBR ? infoBR : infoEN;
 
   return (
     <div className="relative h-[500px] bg-zinc-800/50 border border-zinc-800 rounded-lg overflow-hidden">

@@ -7,7 +7,7 @@
 }
 
 .f-link {
-  @apply text-zinc-700 hover:text-zinc-50 dark:text-zinc-400 dark:hover:text-zinc-50 cursor-pointer transition-all duration-300;
+  @apply text-zinc-400 hover:text-zinc-50 dark:text-zinc-400 dark:hover:text-zinc-50 cursor-pointer transition-all duration-300;
 }
 
 .btn-base {
