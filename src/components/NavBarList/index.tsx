@@ -27,7 +27,7 @@ export function NavBarList({
       {info.navMenuList.map(({ title, href }: NavItemProps, index: number) => {
         const isLastElement = index === info.navMenuList.length - 1;
         return (
-          <li key={href}>
+          <li key={href} className="select-none">
             <>
               {isLastElement ? (
                 <Link href={`mailto:${email.address}`} className="btn-base btn-primary">
@@ -50,6 +50,7 @@ export function NavBarList({
                       wrapper="span"
                       cursor={false}
                       sequence={[`${title}`, 500]}
+                      
                     />
                   ) : (
                     title
