@@ -28,7 +28,7 @@ export function ScrollButton() {
 
   return (
     <button
-      className="bg-zinc-500 hover:bg-zinc-700 dark:bg-zinc-100 dark:hover:bg-zinc-300 items-center justify-center transition-all duration-300 fixed w-12 h-12 left-3 bottom-16 text-5xl z-10 cursor-pointer leading-10 rounded-[3px] shadow-[0_0_0_4px_rgba(0,0,0,0.3)] xl:left-[21.6rem]"
+      className="fixed bottom-16 bg-zinc-500 hover:bg-zinc-700 dark:bg-zinc-100 dark:hover:bg-zinc-300 items-center justify-center transition-all duration-300 w-12 h-12 text-5xl z-10 cursor-pointer leading-10 rounded-[3px] shadow-[0_0_0_4px_rgba(0,0,0,0.3)]"
       style={{ display: visible ? "flex" : "none" }}
       onClick={scrollToTop}
     >

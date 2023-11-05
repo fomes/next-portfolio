@@ -47,7 +47,6 @@ export default function RootLayout({
               {children}
             </main>
             <FooterSection />
-            <ScrollButton />
           </Providers>
         </body>
       </html>
