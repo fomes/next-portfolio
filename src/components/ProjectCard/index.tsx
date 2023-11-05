@@ -28,10 +28,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <ul className="flex gap-3 mb-2 w-full">
           {project.stacks.map((stack) => {
             return (
-              <li
-                key={stack}
-                className="px-4 py-1 text-xs border border-zinc-700 text-zinc-900 dark:bg-zinc-400 rounded-md hover:bg-zinc-800 dark:hover:bg-zinc-500 hover:text-zinc-100 transition-all duration-300 select-none"
-              >
+              <li key={stack} className="px-4 py-1 text-xs btn-tag">
                 {stack}
               </li>
             );

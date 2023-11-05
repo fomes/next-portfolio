@@ -59,9 +59,9 @@ export function NavBar() {
           onClick={() => setIsNavOpen((prevState) => !prevState)}
         >
           {isNavOpen ? (
-            <AiOutlineClose className="text-2xl" />
+            <AiOutlineClose className="text-2xl f-hover" />
           ) : (
-            <FiMenu className="text-2xl" />
+            <FiMenu className="text-2xl f-hover" />
           )}
         </div>
         <div

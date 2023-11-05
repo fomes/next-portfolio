@@ -35,7 +35,8 @@ export function HeroSection() {
 
         <CustomLink
           href={"projects"}
-          className="absolute mt-4 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+          linkType="primary"
+          className="absolute mt-4"
         >
           {info.hero.btn}
         </CustomLink>

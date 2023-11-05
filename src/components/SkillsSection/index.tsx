@@ -24,7 +24,7 @@ export function SkillsSection() {
                   return (
                     <li
                       key={index}
-                      className="bg-zinc-800/50 border text-zinc-100 border-zinc-800 p-4 inline-flex items-center gap-4 justify-center rounded-md hover:opacity-80 transition-all duration-300"
+                      className="bg-zinc-800/50 border border-zinc-800 p-4 inline-flex items-center gap-4 justify-center rounded-md btn-tag"
                     >
                       <stack.icon className="text-xl text-zinc-100 shrink-0" />
                       <span className="select-none">{stack.name}</span>
