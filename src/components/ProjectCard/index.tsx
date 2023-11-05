@@ -16,7 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   let info = langBR ? infoBR : infoEN;
 
   return (
-    <div className="relative h-[500px] bg-zinc-800/50 border border-zinc-800 rounded-lg overflow-hidden">
+    <div className="relative h-[500px] dark:bg-zinc-800/50 border border-zinc-800 rounded-lg overflow-hidden">
       <div className="w-full h-[300px] bg-zinc-300">
         <Link href={project.liveAt} target="_blank">
           <Image
