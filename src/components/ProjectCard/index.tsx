@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { CustomLink } from "../CustomLink";
 import Link from "next/link";
-import { infoEN, infoBR } from "@/data/userInfo";
 import { useContext } from "react";
 import { LangContext } from "@/context/LangContext";
+import { infoEN, infoBR } from "@/data/userInfo";
 
 interface ProjectCardProps {
   project: (typeof infoEN.projects)[0];
@@ -43,20 +42,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-zinc-700 dark:text-zinc-500">{project.desc}</p>
 
         <div className="flex gap-4 absolute bottom-2 left-2">
-          <CustomLink
-            href={project.sourceCode}
-            linkType="secondary"
+          <Link
             target="_blank"
+            href={project.sourceCode}
+            className="btn-base btn-primary"
           >
             {info.projectSection.btnSource}
-          </CustomLink>
-          <CustomLink
-            href={project.liveAt}
-            linkType="secondary"
+          </Link>
+          <Link
             target="_blank"
+            href={project.liveAt}
+            className="btn-base btn-primary"
           >
             {info.projectSection.btnDemo}
-          </CustomLink>
+          </Link>
         </div>
       </div>
     </div>
