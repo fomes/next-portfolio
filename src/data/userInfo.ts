@@ -19,7 +19,7 @@ export const infoBR = {
     {
       id: 2,
       title: "Medical Website",
-      desc: "A medical webiste made with Nextjs",
+      desc: "Uma landing page de um site médico feito com with Nextjs",
       stacks: ["NextJs", "TailndCSS"],
       image: "/assets/2.png",
       sourceCode: "https://github.com/fomes/medical-landing-page",
@@ -28,7 +28,7 @@ export const infoBR = {
     {
       id: 3,
       title: "Hangman Legends",
-      desc: "A hangman game with the league of legends characters",
+      desc: "Um jogo da forca com a temática de personagens do League of Legends",
       stacks: ["ReactJs", "TailndCSS", "Express", "MongoDB"],
       image: "/assets/3.png",
       sourceCode: "https://github.com/fomes/hangman-game",
