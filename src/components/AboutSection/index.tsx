@@ -29,7 +29,7 @@ export function AboutSection() {
 
         <div className="space-y-2 flex flex-col gap-4">
           <p>{info.about.greeting}</p>
-          <p className="text-zinc-400 text-justify">{info.about.desc}</p>
+          <p className="text-zinc-600 text-justify">{info.about.desc}</p>
 
           <ul className="flex gap-12 mt-4">
             {socialLinks.map((link, index) => {
