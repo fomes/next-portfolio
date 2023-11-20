@@ -30,7 +30,10 @@ export function NavBarList({
           <li key={href} className="select-none">
             <>
               {isLastElement ? (
-                <Link href={`mailto:${email.address}`} className="btn-base btn-primary">
+                <Link
+                  href={`mailto:${email.address}`}
+                  className="btn-base btn-primary"
+                >
                   {title}
                 </Link>
               ) : (
@@ -44,16 +47,16 @@ export function NavBarList({
                   linkType={"link"}
                 >
                   {animateNavList ? (
+                    <p className="link-animate">{title}</p>
+                  ) : (
                     <TypeAnimation
                       repeat={1}
                       speed={50}
                       wrapper="span"
                       cursor={false}
+                      className="link-animate"
                       sequence={[`${title}`, 500]}
-                      
                     />
-                  ) : (
-                    title
                   )}
                 </CustomLink>
               )}

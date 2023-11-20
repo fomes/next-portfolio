@@ -32,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <ul className="flex gap-3 mb-2 w-full">
           {project.stacks.map((stack) => {
             return (
-              <li key={stack} className="px-4 py-1 text-xs btn-tag">
+              <li key={stack} className="px-4 py-1 text-xs btn-stack">
                 {stack}
               </li>
             );
