@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useContext } from "react";
 import { LangContext } from "@/context/LangContext";
 import { infoEN, infoBR } from "@/data/userInfo";
+import { FaGithub } from "react-icons/fa";
+import { MdOpenInNew } from "react-icons/md";
 
 interface ProjectCardProps {
   project: (typeof infoEN.projects)[0];
@@ -45,16 +47,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Link
             target="_blank"
             href={project.sourceCode}
-            className="btn-base btn-primary"
+            className="btn-base f-hover"
           >
-            {info.projectSection.btnSource}
+            <FaGithub size={25} />
           </Link>
           <Link
             target="_blank"
             href={project.liveAt}
-            className="btn-base btn-primary"
+            className="btn-base f-hover"
           >
-            {info.projectSection.btnDemo}
+            <MdOpenInNew size={25} />
           </Link>
         </div>
       </div>

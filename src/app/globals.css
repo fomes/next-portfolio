@@ -31,5 +31,5 @@
 }
 
 .link-animate {
-  @apply animate-bounce transition-all duration-300 hover:tracking-[0.4rem];
+  @apply transition-all duration-300 hover:tracking-[0.4rem];
 }
