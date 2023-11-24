@@ -20,7 +20,7 @@ export function ProjectSection() {
           return <ProjectCard key={project.id} project={project} />;
         })}
       </div>
-      <div className="mt-6 flex justify-center">
+      <div className="mt-12 flex justify-center">
         <Link
           target="_blank"
           href={"https://github.com/fomes"}

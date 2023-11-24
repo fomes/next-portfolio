@@ -46,18 +46,7 @@ export function NavBarList({
                   }}
                   linkType={"link"}
                 >
-                  {animateNavList ? (
-                    <p className="link-animate">{title}</p>
-                  ) : (
-                    <TypeAnimation
-                      repeat={1}
-                      speed={50}
-                      wrapper="span"
-                      cursor={false}
-                      className="link-animate"
-                      sequence={[`${title}`, 500]}
-                    />
-                  )}
+                  <p className="link-animate">{title}</p>
                 </CustomLink>
               )}
             </>
