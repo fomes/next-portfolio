@@ -43,14 +43,14 @@ export function HeroSection() {
       </div>
 
       <div className="hidden md:flex w-[500px] h-[500px] relative overflow-hidden">
-        {/* <Image
+        <Image
           priority
           width={500}
           height={500}
           alt="Profile Image"
           src={"/assets/hero.png"}
           className="object-cover object-top w-full h-full self-end rounded-full"
-        /> */}
+        />
         <div className="absolute bottom-0 w-full h1/2 bg-gradient-to-t from-zinc-900 to to-transparent"></div>
       </div>
     </section>
