@@ -4,7 +4,7 @@ import {
   AiOutlineGithub,
 } from "react-icons/ai";
 
-import { FaReact, FaAngular, FaNodeJs, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
 import {
   SiExpress,
   SiTailwindcss,
@@ -32,10 +32,6 @@ export const skills = {
       {
         name: "ReactJS",
         icon: FaReact,
-      },
-      {
-        name: "Angular",
-        icon: FaAngular,
       },
       {
         name: "TailwindCSS",
